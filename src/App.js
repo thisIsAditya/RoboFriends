@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import { robots } from './robots';
 import CardList from './CardList';
+import Scroll from "./Scroll";
 import SearchBox from "./SearchBox";
 
 const App = () => {
@@ -21,10 +21,12 @@ const App = () => {
         return robot.name.toLocaleLowerCase().includes(sF.toLocaleLowerCase());
     });
     return(
-        <div>
-            <h1>RoboFriends</h1>
+        <div style={{textAlign:'center'}}>
+            <h1 style={{fontWeight:'900', fontSize:'50px'}}>RoboFriends</h1>
             <SearchBox searchChange={onSearchChange} />
-            <CardList robots = {filteredRobots} />
+            <Scroll>
+                <CardList robots = {filteredRobots} />  
+            </Scroll>
         </div>
     );
 }

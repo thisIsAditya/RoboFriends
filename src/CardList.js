@@ -8,7 +8,7 @@ const CardList = ({robots}) => {
         );
     });
     return(
-        <div>
+        <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center',alignItems:'center'}}>
             {cardsList}
         </div>
     );
