@@ -15,7 +15,7 @@ const App = () => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
             .then(users => setRobots(users))
-    },[sF]);
+    },[]);
 
     const filteredRobots = sRobots.filter(robot =>{
         return robot.name.toLocaleLowerCase().includes(sF.toLocaleLowerCase());
